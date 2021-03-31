@@ -5,8 +5,7 @@ import Footer from '../component/generic/Footer'
 import Sidebar from '../component/generic/Sidebar' 
 import {useRouter} from 'next/router'
 import { useState } from 'react'
-
-
+import styles from '../styles/Home.module.css'
 
 
 function MyApp({ Component, pageProps }) {
@@ -24,9 +23,9 @@ const [loading,setLoding] =useState(false)
 {/* {loading && 'loading....'} */}
 
 <Header/>
-<section style={{display:'flex'}}>
+<section >
   <Sidebar />
-  <article>
+  <article className={styles.container}>
   <Component {...pageProps}/>
   </article>
 </section>
